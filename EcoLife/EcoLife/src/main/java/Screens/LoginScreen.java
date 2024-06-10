@@ -36,6 +36,7 @@ public class LoginScreen extends javax.swing.JFrame {
 
         User.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
         User.setForeground(new java.awt.Color(255, 255, 255));
+        User.setText("user@email.com");
         getContentPane().add(User);
         User.setBounds(440, 450, 350, 80);
 

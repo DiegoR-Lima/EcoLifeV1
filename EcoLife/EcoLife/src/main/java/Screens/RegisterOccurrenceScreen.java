@@ -8,12 +8,12 @@ package Screens;
  *
  * @author Pichau
  */
-public class SingUpScreen extends javax.swing.JFrame {
+public class RegisterOccurrenceScreen extends javax.swing.JFrame {
 
     /**
-     * Creates new form SingUpScreen
+     * Creates new form RegisterOccurrenceScreen
      */
-    public SingUpScreen() {
+    public RegisterOccurrenceScreen() {
         initComponents();
     }
 
@@ -26,20 +26,18 @@ public class SingUpScreen extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Nome = new javax.swing.JTextField();
-        Fundo = new javax.swing.JLabel();
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(null);
 
-        Nome.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-        getContentPane().add(Nome);
-        Nome.setBounds(260, 190, 560, 110);
-
-        Fundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Png/SingUpScreen.png"))); // NOI18N
-        Fundo.setText("jLabel1");
-        getContentPane().add(Fundo);
-        Fundo.setBounds(0, 0, 1920, 1080);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -61,26 +59,24 @@ public class SingUpScreen extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(SingUpScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegisterOccurrenceScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(SingUpScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegisterOccurrenceScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(SingUpScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegisterOccurrenceScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(SingUpScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegisterOccurrenceScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new SingUpScreen().setVisible(true);
+                new RegisterOccurrenceScreen().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Fundo;
-    private javax.swing.JTextField Nome;
     // End of variables declaration//GEN-END:variables
 }
