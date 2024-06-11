@@ -31,8 +31,7 @@ public class HomeScreenUser extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        Fundo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Pichau\\OneDrive\\Área de Trabalho\\EcoLife\\EcoLife\\src\\main\\java\\Png\\HomeScreenUser.png")); // NOI18N
-        Fundo.setText("jLabel1");
+        Fundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/HomeScreenUser.png"))); // NOI18N
         getContentPane().add(Fundo);
         Fundo.setBounds(0, 0, 1920, 1080);
 
