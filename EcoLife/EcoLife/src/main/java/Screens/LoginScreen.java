@@ -27,6 +27,10 @@ public class LoginScreen extends javax.swing.JFrame {
         Entrar.setBackground(new Color(0, 0, 0, 0));
         Entrar.setBorder(null);
         Entrar.setOpaque(false);
+        
+        Registro.setBackground(new Color(0, 0, 0, 0));
+        Registro.setBorder(null);
+        Registro.setOpaque(false);
     }
 
     
@@ -37,6 +41,7 @@ public class LoginScreen extends javax.swing.JFrame {
         User = new javax.swing.JTextField();
         Pass = new javax.swing.JPasswordField();
         Entrar = new javax.swing.JButton();
+        Registro = new javax.swing.JButton();
         View = new javax.swing.JLabel();
         Nview = new javax.swing.JLabel();
         Fundo = new javax.swing.JLabel();
@@ -61,7 +66,15 @@ public class LoginScreen extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Entrar);
-        Entrar.setBounds(700, 840, 120, 60);
+        Entrar.setBounds(630, 830, 210, 80);
+
+        Registro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RegistroActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Registro);
+        Registro.setBounds(380, 830, 190, 80);
 
         View.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ViewPass.png"))); // NOI18N
         View.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -82,9 +95,8 @@ public class LoginScreen extends javax.swing.JFrame {
         Nview.setBounds(810, 610, 40, 50);
 
         Fundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LoginScreen.png"))); // NOI18N
-        Fundo.setText("jLabel1");
         getContentPane().add(Fundo);
-        Fundo.setBounds(0, 0, 1920, 1080);
+        Fundo.setBounds(0, 0, 1910, 1080);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -125,6 +137,12 @@ public class LoginScreen extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_EntrarActionPerformed
 
+    private void RegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistroActionPerformed
+        SingUpScreen singUpScreen = new SingUpScreen();
+        singUpScreen.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_RegistroActionPerformed
+
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
@@ -139,6 +157,7 @@ public class LoginScreen extends javax.swing.JFrame {
     private javax.swing.JLabel Fundo;
     private javax.swing.JLabel Nview;
     private javax.swing.JPasswordField Pass;
+    private javax.swing.JButton Registro;
     private javax.swing.JTextField User;
     private javax.swing.JLabel View;
     // End of variables declaration//GEN-END:variables
