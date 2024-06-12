@@ -2,6 +2,7 @@ package Screens;
 
 import java.awt.Color;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -100,19 +101,37 @@ public class SingUpScreen extends javax.swing.JFrame {
 
         Senha.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
         Senha.setForeground(new java.awt.Color(255, 255, 255));
-        Senha.setText("jPasswordField1");
+        Senha.setText("123456789");
         getContentPane().add(Senha);
         Senha.setBounds(1090, 190, 540, 110);
 
         ConfirmarSenha.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
         ConfirmarSenha.setForeground(new java.awt.Color(255, 255, 255));
-        ConfirmarSenha.setText("jPasswordField1");
+        ConfirmarSenha.setText("123456789");
         getContentPane().add(ConfirmarSenha);
-        ConfirmarSenha.setBounds(1090, 370, 540, 120);
+        ConfirmarSenha.setBounds(1080, 370, 540, 110);
+
+        Entrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EntrarActionPerformed(evt);
+            }
+        });
         getContentPane().add(Entrar);
         Entrar.setBounds(1540, 890, 200, 90);
+
+        Limpar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LimparActionPerformed(evt);
+            }
+        });
         getContentPane().add(Limpar);
         Limpar.setBounds(1270, 890, 190, 90);
+
+        Voltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VoltarActionPerformed(evt);
+            }
+        });
         getContentPane().add(Voltar);
         Voltar.setBounds(990, 890, 190, 90);
 
@@ -124,9 +143,29 @@ public class SingUpScreen extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
+    private void EntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EntrarActionPerformed
+        JOptionPane.showMessageDialog(null, "Casdastro realizado com sucesso!");
+        HomeScreenUser homeScreenUser = new HomeScreenUser();
+        homeScreenUser.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_EntrarActionPerformed
+
+    private void LimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LimparActionPerformed
+        Nome.setText("");
+        DataDeNascimento.setText("");
+        Email.setText("");
+        ConfirmarEmail.setText("");
+        Senha.setText("");
+        ConfirmarSenha.setText("");
+    }//GEN-LAST:event_LimparActionPerformed
+
+    private void VoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VoltarActionPerformed
+        LoginScreen loginScreen = new LoginScreen();
+        loginScreen.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_VoltarActionPerformed
+
+
     public static void main(String args[]) {
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -151,6 +190,7 @@ public class SingUpScreen extends javax.swing.JFrame {
         //</editor-fold>
 
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new SingUpScreen().setVisible(true);
             }
